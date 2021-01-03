@@ -1,0 +1,217 @@
+body{
+    padding:0px;
+    margin:0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Start of top section*/
+
+#top{
+    background-image: url("backgroundimg.jpg");
+    height:270px;
+    width:100%;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#budget-title{
+    font-size:1.4rem;
+    font-weight:500;
+    margin:0px;
+}
+
+#budget-balance{
+    font-size:2.3rem;
+    margin:0px;
+    padding-bottom:10px;
+}
+
+.budget-incexpbox{
+    height:45px;
+    width:320px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+#budget-income-box{
+    background-color: rgb(38, 158, 146);
+}
+
+#budget-expenses-box{
+    margin-bottom:20px;
+    background-color: rgb(240, 81, 63);
+}
+
+.budget-incexpbox-value{
+    display:flex;
+    justify-content: space-between;
+    width:100px;
+}
+
+.budget-percentage{
+    background-color:salmon;
+    border:5px;
+    font-size:0.8rem;
+    display:flex;
+    align-items:center;
+    padding:2px;
+    color:white;
+}
+
+/*End of Top Section*/
+
+/*Start of Form Section*/
+
+#middle{
+    height:80px;
+    background-color:rgb(252, 240, 240);
+    display:flex;
+    align-items:center;
+}
+
+form{
+    display:flex;
+    justify-content: space-evenly;
+    height:40px;
+    width:45%;
+    margin:0px auto;
+}
+
+#form-incexp{
+    width:50px;
+}
+
+#form-description{
+    width:350px;
+    padding-left:5px;
+    box-sizing:border-box;
+}
+
+#form-value{
+    width: 100px;
+    padding-left:5px;
+    box-sizing:border-box;
+}
+
+#form-checkbox{
+    background-color:inherit;
+    border:none;
+    outline:none;
+}
+
+.form-change-focus-ontype:focus{
+    outline-color: rgb(42, 138, 141);
+}
+
+.red {
+    color:salmon !important;
+}
+
+.red-focus:focus{
+    outline-color: salmon !important;
+}
+
+#form-checkbox-icon{
+    font-size:35px;
+    color:rgb(42, 138, 141);
+    display:inline-block;  /*transform does not work on inline items, so have to change to inline-block*/
+}
+
+#form-checkbox-icon:hover{
+    cursor:pointer;
+}
+
+#form-checkbox-icon:active{
+    transform: translateY(2px);
+}
+
+/*active is when element is clicked vs focus when element has been selected eg you tab to it. Sometimes, they 
+overlap*/
+
+/*End of Form Section*/
+
+/*Start of Bottom Section*/
+
+#bottom{
+    margin:60px 15%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap: 10%;
+    font-weight:600;
+}
+
+#bottom-inc{
+    color: rgb(38, 158, 146);
+}
+
+#bottom-inc-title{
+    margin-bottom:20px;
+}
+
+#bottom-inc-amt{
+    transition: 0.3s;
+}
+
+.bottom-item{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:35px;
+    border-top: solid 1px rgb(230, 224, 224);
+    border-bottom: solid 1px rgb(230, 224, 224);
+    position:relative;
+}
+
+#bottom-exp{
+    color: rgb(240, 81, 63);
+}
+
+#bottom-exp-title{
+    margin-bottom:20px;
+}
+
+#bottom-exp-value-percentage-box{
+    display:flex;
+    width:110px;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.delete-btn{
+    border:none;
+    background-color:inherit;
+    outline:none;
+    font-size: 1.3rem;
+
+    /*set to invisible initially*/
+    color:white;
+    position: absolute;
+    z-index: -1;
+}
+/*Hover effects for delete btn*/
+
+.bottom-item:hover .delete-btn{
+    color:inherit;
+    position:absolute;
+    right:0px;
+    z-index: 1;
+}
+
+.bottom-item:hover #bottom-inc-amt{
+    transform:translateX(-35px);
+}
+
+.bottom-item:hover .delete-btn:hover{
+    cursor:pointer;
+}
+
+.bottom-item:hover #bottom-exp-value-percentage-box{
+    transform:translateX(-35px);
+}
+

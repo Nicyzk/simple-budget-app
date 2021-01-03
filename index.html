@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <title>Budget</title>
+</head>
+<body>
+    <section id="top">
+        <p id="budget-title">Available Balance in %month%</p>
+        <p id="budget-balance">+ 0.00</p>
+        <div id="budget-income-box" class="budget-incexpbox">
+            <div>INCOME</div>
+            <div class="budget-incexpbox-value">
+                <div id="budget-inc-balance">+ 0.00</div>
+                <div></div>
+            </div>
+            
+        </div>
+        <div id="budget-expenses-box" class="budget-incexpbox">
+            <div>EXPENSES</div>
+            <div class="budget-incexpbox-value">
+                <div id="budget-exp-balance">- 0.00</div>
+                <div class="budget-percentage" id="top-budget-percentage">0%</div>
+            </div>
+        </div>
+    </section>
+    <section id="middle">
+        <form>
+            <select id="form-incexp" class="form-change-focus-ontype">
+                <option value="inc">+</option>
+                <option value="exp">-</option>
+            </select>
+            <input type="text" id="form-description" name="description" placeholder="Add Description" class="form-change-focus-ontype">
+            <input type="number" id="form-value" name="value" placeholder="Value" class="form-change-focus-ontype">
+            <button type="button" id="form-checkbox"><i class="ion-ios-checkmark-outline" id="form-checkbox-icon"></i></button>
+        </form>
+        
+    </section>
+    <section id="bottom">
+        <div id="bottom-inc">
+            <div id="bottom-inc-title">INCOME</div>
+            <!-- Income item template
+            <div class="bottom-item ID">
+                <div>Website Project</div>
+                <div class="bottom-item-amt" id="bottom-inc-amt">+ 2500.00</div>
+                <button class="delete-btn"><i class="ion-ios-close-outline"></i></button>
+            </div>
+            -->
+            
+        </div>
+
+        <div id="bottom-exp">
+            <div id="bottom-exp-title">EXPENSES</div>
+            <!--
+            <div class="bottom-item ID">
+                <div>Website Project</div>
+                <div id="bottom-exp-value-percentage-box">
+                    <div class="bottom-item-amt">+ 2500.00</div>
+                    <div class="budget-percentage exp-budget-percentage">30%</div>
+                </div>
+                <button class="delete-btn"><i class="ion-ios-close-outline"></i></button>
+            </div>
+            -->
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
